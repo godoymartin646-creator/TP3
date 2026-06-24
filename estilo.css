@@ -1,0 +1,23 @@
+.flex-container {
+   display: flex;
+   padding: 20px;
+   flex-direction: column;
+   gap: 15px;
+   justify-content: center;
+   margin-left: 150px;
+   margin-right: 150px;
+   
+}
+
+.tarjeta-años {
+    background-color: rgb(9, 181, 255);
+    color: white;
+    text-align: center;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 0 4px 6px rgba(1, 59, 20, 0.314);
+}
