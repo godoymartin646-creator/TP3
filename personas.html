@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Personas y IMC</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <h1>Registro de Personas</h1>
+
+    <form id="formulario-persona">
+        <div class="input-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+        </div>
+        <div class="input-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" required>
+        </div>
+        <div class="input-group">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" min="0" required>
+        </div>
+        <div class="input-group">
+            <label for="altura">Altura (en metros, ej: 1.75):</label>
+            <input type="number" id="altura" step="0.01" min="0" required>
+        </div>
+        <div class="input-group">
+            <label for="peso">Peso (en kg):</label>
+            <input type="number" id="peso" step="0.1" min="0" required>
+        </div>
+        <button type="submit" id="btn-agregar" class="btn-estilizado">Agregar Persona</button>
+    </form>
+
+    <table id="tabla-personas">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Altura (m)</th>
+                <th>Peso (kg)</th>
+                <th>IMC</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpo-tabla">
+            </tbody>
+    </table>
+
+    <script src="personas.js"></script>
+</body>
+</html>
