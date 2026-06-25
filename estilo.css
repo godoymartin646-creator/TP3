@@ -1,12 +1,43 @@
+
+body {
+    background-color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(2, 2, 77);
+    padding: 30px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+}
+.btn-estilizado {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 0 4px 6px rgba(1, 59, 20, 0.314);
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-estilizado:active {
+    transform: scale(0.98);
+}
+
+
+/*PAGINA: MUNDIALES (flexbox)*/
 .flex-container {
-   display: flex;
-   padding: 20px;
-   flex-direction: column;
-   gap: 15px;
-   justify-content: center;
-   margin-left: 150px;
-   margin-right: 150px;
-   
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    margin: 77px 150px 0 150px;
 }
 
 .tarjeta-años {
@@ -15,9 +46,15 @@
     text-align: center;
     padding: 15px 30px;
     border-radius: 8px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     border-style: solid;
     border-color: black;
     box-shadow: 0 4px 6px rgba(1, 59, 20, 0.314);
+}
+
+#btn-ordenar {
+    background-color: rgb(144, 198, 221);
+}
+#btn-ordenar:hover {
+    background-color: rgb(114, 168, 191);
 }
