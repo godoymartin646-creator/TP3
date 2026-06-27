@@ -35,9 +35,14 @@ function App() {
         setPeso("");
     };
 
+    const handleEliminarPersona = (id) => {
+    const listaActualizada = personas.filter(persona => persona.id !== id);
+    setPersonas(listaActualizada);
+};
+
     return (
         <main style={{ padding: '20px' }}>
-            <h1>Registro de Personas (Versión React)</h1>
+            <h1>Registro de Personas (React)</h1>
 
             <form id="formulario-persona" onSubmit={handleAgregarPersona}>
                 <div className="input-group">
@@ -62,9 +67,43 @@ function App() {
                 </div>
                 <button type="submit" id="btn-agregar" className="btn-estilizado">Agregar Persona</button>
             </form>
-        </main>
-    );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+            <table>
+                <thead>
+                    <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>Altura (m)</th>
+                    <th>Peso (kg)</th>
+                    <th>IMC</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+                <tbody>
+                    {personas.length === 0 ? (
+                        <tr>
+                            <td colSpan="7" style={{ textAlign: 'center', color: '#888' }}>No hay personas registradas aún.</td>
+                        </tr>
+                    ) : (
+                        personas.map((persona) => (
+                            <tr key={persona.id}>
+                                <td>{persona.nombre}</td>
+                                <td>{persona.apellido}</td>
+                                <td>{persona.edad}</td>
+                                <td>{persona.altura} m</td>
+                                <td>{persona.peso} kg</td>
+                                <td><strong>{persona.imc}</strong></td>
+                                <td>
+                                    <button className="btn-eliminar" onClick={() => handleEliminarPersona(persona.id)}>Quitar</button>
+                                </td>
+                            </tr>
+                        ))
+                    )}
+                </tbody>
+            </table>
+                    </main>
+                );
+            }
+            
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(<App />);
